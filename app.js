@@ -23,7 +23,7 @@ function populate() {
 };
 
 
-
+// 
 function guess(id, guess) {
     var button = document.getElementById(id);
     button.onclick = function() {
@@ -32,12 +32,14 @@ function guess(id, guess) {
     }
 }
 
+//popultaing text showing progress
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
     var element = document.getElementById("progress");
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
 }
 
+//populating score at the end
 function showScores() {
    var endQuizHtml = "<h1>Result</h1>";
    endQuizHtml += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
@@ -49,7 +51,7 @@ function showScores() {
 
 
 
-
+// different questions
 var questions = [
     new Question("A very useful tool used during development and </br> debugging for printing content to the debugger is:", ["JavaScript", "terminal/bash", "for loops", "console log"], "console log"),
     new Question("String valus must be inclosed within _______ when being assigned to variables.", ["commas", "curly brackets", "quotes", "parentheses"], "quotes"),
